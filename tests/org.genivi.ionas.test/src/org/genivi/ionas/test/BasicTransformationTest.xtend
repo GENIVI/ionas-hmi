@@ -108,7 +108,23 @@ class BasicTransformationTest {
 		assertFalse(consoleOutput.contains("Exception") || consoleOutput.contains("Error"))
 		
 		bot.menu("Window").menu("Show View").menu("Problems").click();
-		val problemsBot = bot.views.findFirst[title == "Problems"].bot
+		val SWTBotView view = bot.viewByTitle("Problems");
+    	view.show();
+    	view.bot().tree();
+    	val String category = "Errors";
+    	var int nbOfErrors = 0;
+    	for (SWTBotTreeItem item : view.bot.tree.getAllItems()) {
+     		val String text = item.getText();
+     		
+      		if (text != null && text.startsWith(category)) {
+        		item.expand();
+        		nbOfErrors = item.getNodes().size();
+        	
+      		}
+   		}
+//		val problemsBot = bot.views.findFirst[title == "Problems"].bot
+//		val table = problemsBot.table
+//		problemsBot.tree(1).allItems.forEach[println("'" + it.text + "' .. " + it.id)]
 		//assertNotNull(problemsBot.tree.allItems.findFirst[it.nodes.head.startsWith("Warnings")])
 		//assertNull(problemsBot.tree.allItems.findFirst[text.startsWith("Errors")])
 		
