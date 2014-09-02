@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/org.genivi.ionas.feature_0.0.1.qualifier.jar" id="org.genivi.ionas.feature" version="0.0.1.qualifier"/>
+   <feature url="repo/features/org.autosar.ionas.feature_1.0.0.qualifier.jar" id="org.autosar.ionas.feature" version="1.0.0.qualifier"/>
+</site>

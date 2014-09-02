@@ -1,0 +1,14 @@
+package org.genivi.ionas.testProject
+
+interface testInterface1 {
+	attribute Double aDouble
+	method aMethod {
+		in {
+			Int8 anInt
+		}
+		
+		out {
+			String aString
+		}
+	}
+}

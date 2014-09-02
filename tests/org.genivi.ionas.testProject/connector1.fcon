@@ -1,0 +1,16 @@
+connector Connector1 {
+	import_franca "francaInput1.fidl";
+	import_autosar "autosarInput1.arxml";
+	export_franca "result/francaOutput1.fidl";
+	export_autosar "output/autosarOutput1.arxml";
+	
+	instances {
+		franca_instance instance1 implements org.genivi.ionas.testProject.testInterface1;
+	}
+	
+	connections {
+		connection1 franca_instance instance1 : testInterface1 -> autosar_port ARRoot.aComposition : aComponentPrototype:ARRoot.aComponentType.rSR;
+		connection2 franca_instance instance1 -> autosar_port ARRoot.aComposition:aComponentPrototype:ARRoot.aComponentType.pCS;
+		connection3 autosar_port ARRoot.aComposition : aComponentPrototype :ARRoot.aComponentType.rCS -> franca_instance instance1 :testInterface1;
+	}
+}

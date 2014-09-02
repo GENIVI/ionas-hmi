@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.genivi.ionas</groupId>
+		<artifactId>org.genivi.ionas.parent</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../../releng/org.genivi.ionas.parent/pom.xml</relativePath>
+	</parent>
+
+	<artifactId>org.genivi.ionas.test</artifactId>
+	<packaging>eclipse-test-plugin</packaging>
+	<version>0.0.1-SNAPSHOT</version>
+	<dependencies>
+		<!-- It is important to have JUnit >= 4.7 as dependency to select the right 
+			JUnit Provider see http://maven.apache.org/plugins/maven-surefire-plugin/examples/junit.html -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.8.1</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<sourceDirectory>src</sourceDirectory>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>build-helper-maven-plugin</artifactId>
+				<version>1.7</version>
+				<executions>
+					<execution>
+						<id>add-source</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>add-source</goal>
+						</goals>
+						<configuration>
+							<sources>
+								<source>${basedir}/xtend-gen</source>
+							</sources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.eclipse.xtend</groupId>
+				<artifactId>xtend-maven-plugin</artifactId>
+				<version>${xtext-version}</version>
+				<configuration>
+					<encoding>UTF-8</encoding>
+					<jvmSettings>
+						<fork>true</fork>
+						<jvmArgs>
+							<jvmArg>-Xms100m</jvmArg>
+							<jvmArg>-Xmx500m</jvmArg>
+							<jvmArg>-XX:MaxPermSize=512m</jvmArg>
+						</jvmArgs>
+					</jvmSettings>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>compile</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${basedir}/xtend-gen</outputDirectory>
+						</configuration>
+					</execution>
+				</executions>
+				<dependencies>
+					<!-- these dependencies are contributed in Eclipse by the "Xtend Library" 
+						classpath container -->
+					<dependency>
+						<groupId>org.eclipse.xtend</groupId>
+						<artifactId>org.eclipse.xtend.lib</artifactId>
+						<version>${xtext-version}</version>
+						<type>pom</type>
+					</dependency>
+				</dependencies>
+			</plugin>
+			<!-- <plugin>
+				<artifactId>maven-clean-plugin</artifactId>
+				<version>2.4.1</version>
+				<configuration>
+					<filesets>
+						<fileset>
+							<directory>${basedir}/xtend-gen</directory>
+							<includes>
+								<include>**</include>
+							</includes>
+						</fileset>
+					</filesets>
+				</configuration>
+			</plugin>-->
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-surefire-plugin</artifactId>
+				<configuration>
+					<useUIHarness>true</useUIHarness>
+					<useUIThread>false</useUIThread>
+					<product>org.artop.demonstrator.product</product>
+					<!--  <application>org.eclipse.ui.ide.workbench</application> -->
+					<!-- <testSuite>org.genivi.ionas.test</testSuite> <testClass>org.genivi.ionas.test.BasicTransformationTest</testClass> -->
+					<testClassesDirectory>${project.build.outputDirectory}</testClassesDirectory>
+					<includes>
+						<include>**/*Test*.java</include>
+					</includes>
+				</configuration>
+			</plugin>
+			<!-- <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-surefire-plugin</artifactId> 
+				<executions> <execution> <id>test</id> <phase>test</phase> <configuration> 
+				<testClassesDirectory>${project.build.outputDirectory}</testClassesDirectory> 
+				<includes> <include>**/*Test*.java</include> </includes> </configuration> 
+				<goals> <goal>test</goal> </goals> </execution> </executions> </plugin> -->
+		</plugins>
+	</build>
+</project>

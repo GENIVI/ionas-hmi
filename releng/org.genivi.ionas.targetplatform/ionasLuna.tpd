@@ -1,0 +1,72 @@
+target "IoNAS Target Platform Luna"
+
+with source requirements
+
+location "http://download.eclipse.org/releases/luna" {
+	org.eclipse.core.runtime
+	org.eclipse.core.resources
+	org.eclipse.ui
+	org.eclipse.ui.editors
+	org.eclipse.ui.ide
+	org.eclipse.ui.ide.application
+	org.eclipse.jface
+	org.eclipse.jface.text
+	org.eclipse.compare
+	org.eclipse.xtext.sdk.feature.group
+	org.eclipse.xpand.feature.group
+	org.eclipse.xtend.sdk.feature.group
+	org.eclipse.emf.feature.group
+	org.eclipse.emf.transaction
+	org.eclipse.emf.mwe.core.feature.group
+	org.eclipse.emf.mwe.utils
+	org.eclipse.emf.mwe2.language
+	org.eclipse.emf.mwe2.launch
+	org.eclipse.emf.mwe2.lib
+	org.eclipse.emf.mwe2.runtime
+	org.eclipse.emf.compare.feature.group
+	org.eclipse.rcp.feature.group
+}
+
+location "https://www.artop.org/containers/artop-sdk-update-site-4.2/"{
+	org.artop.core.autosar411.sdk.feature.group
+	org.artop.aal.gautosar
+	org.artop.aal.common
+	org.artop.eel.feature.group
+	org.artop.aal.examples.explorer
+	org.artop.aal.examples.actions
+	org.artop.aal.examples.editor
+	org.artop.aal.examples.newwizards
+	org.artop.core.examples.feature.group
+	org.artop.examples.feature.group
+}
+
+location "http://download.eclipse.org/sphinx/updates/releases/0.8.x"{
+	org.eclipse.sphinx.feature.group
+	org.eclipse.sphinx.emf.metamodelgen.feature.group
+}
+
+location "http://download.eclipse.org/tools/orbit/downloads/drops/R20140525021250/repository/" {
+	com.google.inject
+	com.google.guava
+	org.junit
+	org.hamcrest
+	org.hamcrest.core
+	org.apache.commons.logging
+	org.apache.xerces
+}
+
+location "http://franca.eclipselabs.org.codespot.com/git/update_site/releases/0.9.0/"{
+	org.franca.core.feature.group
+	org.franca.core.dsl.ui
+	org.franca.deploymodel.dsl
+	org.franca.deploymodel.dsl.ui
+}
+
+location "http://download.eclipse.org/technology/swtbot/releases/latest" {
+	org.eclipse.swtbot.feature.group
+	org.eclipse.swtbot.eclipse.feature.group
+	org.eclipse.swtbot.generator.feature.feature.group
+}
+
+
+

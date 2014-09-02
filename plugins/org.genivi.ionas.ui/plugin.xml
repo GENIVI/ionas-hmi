@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="org.genivi.ionas.ui.GenerateStubsHandler"
+            id="org.genivi.ionas.ui.generatecommand"
+            name="generate">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:org.eclipse.ui.popup.any?after=additions">
+         <command
+               commandId="org.genivi.ionas.ui.generatecommand"
+               label="Generate stubs"
+               style="push"
+               tooltip="Generate AUTOSAR and Franca stubs">
+            <visibleWhen
+                  checkEnabled="false">
+               <with
+                     variable="selection">
+                  <and>
+                     <count
+                           value="1">
+                     </count>
+                     <iterate
+                           ifEmpty="false"
+                           operator="and">
+                        <test
+                              property="org.eclipse.core.resources.extension"
+                              value="fcon">
+                        </test>
+                     </iterate>
+                  </and>
+               </with>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.core.expressions.definitions">
+      <definition
+            id="org.genivi.ionas.ui.fconSelected">
+      </definition>
+   </extension>
+
+</plugin>

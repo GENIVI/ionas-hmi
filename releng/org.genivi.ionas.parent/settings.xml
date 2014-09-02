@@ -1,0 +1,26 @@
+<settings xmlns="http://maven.apache.org/SETTINGS/1.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.org/xsd/settings-1.1.0.xsd">
+  <!-- Use local maven repository for this job only -->
+  <interactiveMode/>
+  <usePluginRegistry/>
+  <offline/>
+  <proxies>
+    
+  </proxies>
+  <servers>
+
+   <server>
+      <id>https://www.artop.org/containers/artop-sdk-update-site-4.2</id>
+      <username>automation.user.itemis</username>
+      <password>demune-46</password>
+   </server>
+
+  </servers>
+
+  <profiles>                                                                                       
+  </profiles>
+  <activeProfiles>
+  </activeProfiles>
+  <pluginGroups/>
+
+</settings>

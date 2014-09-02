@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="org.genivi.ionas.feature"
+      label="Feature"
+      version="0.0.1.qualifier">
+
+   <description url="http://www.example.com/description">
+      [Enter Feature Description here.]
+   </description>
+
+   <copyright url="http://www.example.com/copyright">
+      [Enter Copyright Description here.]
+   </copyright>
+
+   <license url="http://www.example.com/license">
+      [Enter License Description here.]
+   </license>
+
+   <includes
+         id="org.autosar.ionas.feature"
+         version="0.0.0"/>
+
+   <requires>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="org.eclipse.core.resources"/>
+      <import plugin="org.eclipse.xtext" version="2.6.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.sphinx.emf" version="0.8.0" match="greaterOrEqual"/>
+      <import plugin="org.franca.deploymodel.dsl.ui" version="0.9.0" match="greaterOrEqual"/>
+      <import plugin="org.franca.core.dsl.ui" version="0.9.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.swt"/>
+      <import feature="org.autosar.ionas.feature" version="1.0.0"/>
+   </requires>
+
+   <plugin
+         id="org.genivi.ionas.ui"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"/>
+
+</feature>
