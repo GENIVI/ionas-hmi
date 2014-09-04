@@ -41,8 +41,17 @@
           <OPERATIONS>
             <CLIENT-SERVER-OPERATION>
               <SHORT-NAME>anOperation</SHORT-NAME>
+              <POSSIBLE-ERROR-REFS>
+                <POSSIBLE-ERROR-REF DEST="APPLICATION-ERROR">/ARRoot/CSp/anError</POSSIBLE-ERROR-REF>
+              </POSSIBLE-ERROR-REFS>
             </CLIENT-SERVER-OPERATION>
           </OPERATIONS>
+          <POSSIBLE-ERRORS>
+            <APPLICATION-ERROR>
+              <SHORT-NAME>anError</SHORT-NAME>
+              <ERROR-CODE>255</ERROR-CODE>
+            </APPLICATION-ERROR>
+          </POSSIBLE-ERRORS>
         </CLIENT-SERVER-INTERFACE>
       </ELEMENTS>
     </AR-PACKAGE>

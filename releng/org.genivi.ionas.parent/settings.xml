@@ -1,26 +1,35 @@
-<settings xmlns="http://maven.apache.org/SETTINGS/1.1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.org/xsd/settings-1.1.0.xsd">
-  <!-- Use local maven repository for this job only -->
-  <interactiveMode/>
-  <usePluginRegistry/>
-  <offline/>
-  <proxies>
-    
-  </proxies>
-  <servers>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.1.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.org/xsd/settings-1.1.0.xsd">
+	<!-- Use local maven repository for this job only -->
+	<interactiveMode />
+	<usePluginRegistry />
+	<offline />
+	<proxies>
 
-   <server>
-      <id>https://www.artop.org/containers/artop-sdk-update-site-4.2</id>
-      <username>automation.user.itemis</username>
-      <password>demune-46</password>
-   </server>
+	</proxies>
+	<servers>
 
-  </servers>
+		<server>
+			<id>https://www.artop.org/containers/artop-sdk-update-site-4.2</id>
+			<username>automation.user.itemis</username>
+			<password>demune-46</password>
+		</server>
 
-  <profiles>                                                                                       
-  </profiles>
-  <activeProfiles>
-  </activeProfiles>
-  <pluginGroups/>
+	</servers>
+
+	<profiles>
+	</profiles>
+	<activeProfiles>
+	</activeProfiles>
+	<pluginGroups />
+	<mirrors>
+		<mirror>
+			<id>builds.itemis.de</id>
+			<name>itemis</name>
+			<url>https://builds.itemis.de/nexus/content/groups/public/</url>
+			<mirrorOf>*</mirrorOf>
+		</mirror>
+	</mirrors>
 
 </settings>
