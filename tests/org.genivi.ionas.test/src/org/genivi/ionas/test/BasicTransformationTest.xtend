@@ -89,7 +89,7 @@ class BasicTransformationTest {
 	def void test01() {
 		println("starting test01")
 		bot.tree.getTreeItem("org.genivi.ionas.testProject").expand
-		Thread.sleep(5000)
+		println(1)
 		bot.tree.getTreeItem("org.genivi.ionas.testProject").getNode("connector1.fcon").contextMenu("Generate stubs").
 			click
 		println("generating stubs")
