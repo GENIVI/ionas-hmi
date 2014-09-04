@@ -14,8 +14,6 @@
 	<packaging>eclipse-test-plugin</packaging>
 	<version>0.0.1-SNAPSHOT</version>
 	<dependencies>
-		<!-- It is important to have JUnit >= 4.7 as dependency to select the right 
-			JUnit Provider see http://maven.apache.org/plugins/maven-surefire-plugin/examples/junit.html -->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
@@ -27,83 +25,12 @@
 		<sourceDirectory>src</sourceDirectory>
 		<plugins>
 			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>build-helper-maven-plugin</artifactId>
-				<version>1.7</version>
-				<executions>
-					<execution>
-						<id>add-source</id>
-						<phase>generate-sources</phase>
-						<goals>
-							<goal>add-source</goal>
-						</goals>
-						<configuration>
-							<sources>
-								<source>${basedir}/xtend-gen</source>
-							</sources>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-
-			<!--  <plugin>
-				<groupId>org.eclipse.xtend</groupId>
-				<artifactId>xtend-maven-plugin</artifactId>
-				<version>${xtext-version}</version>
-				<configuration>
-					<encoding>UTF-8</encoding>
-					<jvmSettings>
-						<fork>true</fork>
-						<jvmArgs>
-							<jvmArg>-Xms256m</jvmArg>
-							<jvmArg>-Xmx1024m</jvmArg>
-							<jvmArg>-XX:MaxPermSize=512m</jvmArg>
-						</jvmArgs>
-					</jvmSettings>
-				</configuration>
-				<executions>
-					<execution>
-						<goals>
-							<goal>compile</goal>
-						</goals>
-						<configuration>
-							<outputDirectory>${basedir}/xtend-gen</outputDirectory>
-						</configuration>
-					</execution>
-				</executions>
-				<dependencies>
-
-					<dependency>
-						<groupId>org.eclipse.xtend</groupId>
-						<artifactId>org.eclipse.xtend.lib</artifactId>
-						<version>${xtext-version}</version>
-						<type>pom</type>
-					</dependency>
-				</dependencies>
-			</plugin> -->
-			<!-- <plugin>
-				<artifactId>maven-clean-plugin</artifactId>
-				<version>2.4.1</version>
-				<configuration>
-					<filesets>
-						<fileset>
-							<directory>${basedir}/xtend-gen</directory>
-							<includes>
-								<include>**</include>
-							</includes>
-						</fileset>
-					</filesets>
-				</configuration>
-			</plugin>-->
-			<plugin>
 				<groupId>org.eclipse.tycho</groupId>
 				<artifactId>tycho-surefire-plugin</artifactId>
 				<configuration>
 					<useUIHarness>true</useUIHarness>
 					<useUIThread>false</useUIThread>
 					<product>org.artop.demonstrator.product</product>
-					<!--  <application>org.eclipse.ui.ide.workbench</application> -->
-					<!-- <testSuite>org.genivi.ionas.test</testSuite> <testClass>org.genivi.ionas.test.BasicTransformationTest</testClass> -->
 					<testClassesDirectory>${project.build.outputDirectory}</testClassesDirectory>
 					<includes>
 						<include>**/*Test*.java</include>
@@ -111,11 +38,6 @@
 					<argLine>-Xms256m -Xmx1024m -XX:MaxPermSize=512m</argLine>
 				</configuration>
 			</plugin>
-			<!-- <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-surefire-plugin</artifactId> 
-				<executions> <execution> <id>test</id> <phase>test</phase> <configuration> 
-				<testClassesDirectory>${project.build.outputDirectory}</testClassesDirectory> 
-				<includes> <include>**/*Test*.java</include> </includes> </configuration> 
-				<goals> <goal>test</goal> </goals> </execution> </executions> </plugin> -->
 		</plugins>
 	</build>
 </project>

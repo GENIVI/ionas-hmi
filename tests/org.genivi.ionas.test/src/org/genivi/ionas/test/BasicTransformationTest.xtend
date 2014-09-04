@@ -50,9 +50,7 @@ class BasicTransformationTest {
 		//println("shell visible " + bot.activeShell.visible + " and active " + bot.activeShell.active)
 		try {
 			bot.viewByTitle("Welcome").close
-			println("closed welcome view")
 		} catch (WidgetNotFoundException e) {
-			println("there was no welcome view ")
 		}
 
 		bot.perspectiveByLabel("Artop").activate
@@ -71,7 +69,6 @@ class BasicTransformationTest {
 		Thread.sleep(1000)
 		var SWTBotTreeItem item = bot.tree.allItems.get(1)
 		
-		println("item is " + item)
 		bot.checkBox("Copy projects into workspace").select
 
 		Thread.sleep(500)
@@ -80,23 +77,18 @@ class BasicTransformationTest {
 		item.toggleCheck
 		Thread.sleep(500)
 		bot.button("Finish").click
-		println("done with beforeclass")
 		// this takes a while
 		Thread.sleep(4000)
 	}
 
 	@Test
 	def void test01() {
-		println("starting test01")
 		bot.tree.getTreeItem("org.genivi.ionas.testProject").expand
-		println(1)
 		bot.tree.getTreeItem("org.genivi.ionas.testProject").getNode("connector1.fcon").contextMenu("Generate stubs").
 			click
-		println("generating stubs")
 		bot.shell("Progress Information")
 		Thread.sleep(8000)
 		bot.shell("IoNAS").bot.button("OK").click
-		println("hopefully done")
 		bot.tree.getTreeItem("org.genivi.ionas.testProject").contextMenu("Refresh").click
 		Thread.sleep(2000)
 		bot.tree.getTreeItem("org.genivi.ionas.testProject").expand
@@ -146,7 +138,7 @@ class BasicTransformationTest {
 			while (System.currentTimeMillis() < endTime) { // wait until timeout
 				try {
 					display = SWTUtils.display();
-					println("got a display")
+					println("Got a display")
 					if (display != null) {
 						return;
 					}
