@@ -56,7 +56,7 @@
 						<fork>true</fork>
 						<jvmArgs>
 							<jvmArg>-Xms256m</jvmArg>
-							<jvmArg>-Xmx512m</jvmArg>
+							<jvmArg>-Xmx1024m</jvmArg>
 							<jvmArg>-XX:MaxPermSize=1024m</jvmArg>
 						</jvmArgs>
 					</jvmSettings>

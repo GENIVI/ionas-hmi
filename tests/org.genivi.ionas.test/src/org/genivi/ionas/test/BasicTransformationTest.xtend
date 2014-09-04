@@ -69,14 +69,9 @@ class BasicTransformationTest {
 		bot.comboBox.text = ResourcesPlugin.getWorkspace().root.rawLocation.makeAbsolute.toString + "/../../../../"
 		bot.comboBox.pressShortcut(KeyStroke.getInstance(SWT.LF));
 		Thread.sleep(1000)
-		var SWTBotTreeItem item = null
-		for (i : bot.tree.allItems) {
-			if (i.text.startsWith("")) {
-				item = i
-			}
-		}
+		var SWTBotTreeItem item = bot.tree.allItems.get(1)
+		
 		println("item is " + item)
-		ResourcesPlugin.getWorkspace().root.rawLocation.makeAbsolute.toString
 		bot.checkBox("Copy projects into workspace").select
 
 		Thread.sleep(500)
@@ -85,20 +80,23 @@ class BasicTransformationTest {
 		item.toggleCheck
 		Thread.sleep(500)
 		bot.button("Finish").click
-
+		println("done with beforeclass")
 		// this takes a while
 		Thread.sleep(4000)
 	}
 
 	@Test
 	def void test01() {
+		println("starting test01")
 		bot.tree.getTreeItem("org.genivi.ionas.testProject").expand
 		Thread.sleep(5000)
 		bot.tree.getTreeItem("org.genivi.ionas.testProject").getNode("connector1.fcon").contextMenu("Generate stubs").
 			click
+		println("generating stubs")
 		bot.shell("Progress Information")
 		Thread.sleep(8000)
 		bot.shell("IoNAS").bot.button("OK").click
+		println("hopefully done")
 		bot.tree.getTreeItem("org.genivi.ionas.testProject").contextMenu("Refresh").click
 		Thread.sleep(2000)
 		bot.tree.getTreeItem("org.genivi.ionas.testProject").expand
