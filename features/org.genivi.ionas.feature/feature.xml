@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature
       id="org.genivi.ionas.feature"
-      label="Feature"
+      label="Franca-AUTOSAR Interface Translation UI"
       version="0.0.1.qualifier">
 
    <description>
@@ -15,6 +15,7 @@
    <license url="license.html">
       %license
    </license>
+
    <includes
          id="org.autosar.ionas.feature"
          version="0.0.0"/>
