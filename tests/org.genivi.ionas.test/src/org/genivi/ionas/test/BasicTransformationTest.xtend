@@ -78,7 +78,7 @@ class BasicTransformationTest {
 		Thread.sleep(500)
 		bot.button("Finish").click
 		// this takes a while
-		Thread.sleep(4000)
+		Thread.sleep(10000)
 	}
 
 	@Test
