@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+	<feature id="org.autosar.ionas.feature">
+		<category name="org.genivi.ionas"/>
+	</feature>
+	<feature id="org.genivi.ionas.feature">
+		<category name="org.genivi.ionas"/>
+	</feature>
+	<feature id="org.genivi.ionas.feature.source">
+		<category name="org.genivi.ionas"/>
+	</feature>
+	<category-def name="org.genivi.ionas" label="IoNAS">
+		<description>
+			IoNAS: Tool for integrating AUTOSAR models with Franca interfaces
+		</description>
+	</category-def>
+</site>
