@@ -5,7 +5,6 @@
 	<artifactId>org.genivi.ionas.parent</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
-	<name>IoNAS Parent</name>
 
 	<properties>
 		<tycho-version>0.20.0</tycho-version>
@@ -67,7 +66,7 @@
 					<excludes>
 						<feature id="org.autosar.ionas.feature" />
 					</excludes>
-					<labelSuffix> (source)</labelSuffix>
+					<labelSuffix>&#xA0;(Source)</labelSuffix>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -215,4 +214,12 @@
 			</plugin>
 		</plugins>
 	</build>
+	<name>IoNAS</name>
+	<description>IoNAS, a product of the AUTOSAR R4.2.1 Concept 610 “Integration of Non-AUTOSAR systems”, enables smooth interaction between AUTOSAR-ECUS and non-AUTOSAR-ECUs using Franca IDL through model transformations.</description>
+	<licenses>
+		<license>
+			<name>Eclipse Public License v1.0</name>
+			<comments>All rights reserved. This program and the accompanying materials are made available under the terms of the Eclipse Public License v1.0 which accompanies this distribution, and is available at http://www.eclipse.org/legal/epl-v10.htm </comments>
+		</license>
+	</licenses>
 </project>

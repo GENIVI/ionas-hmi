@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: Ui
+Bundle-Name: IoNAS UI
 Bundle-SymbolicName: org.genivi.ionas.ui;singleton:=true
 Bundle-Version: 0.0.1.qualifier
 Bundle-Activator: org.genivi.ionas.ui.Activator
