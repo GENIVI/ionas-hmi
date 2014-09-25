@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?pde?>
 <!-- generated with https://github.com/mbarbero/fr.obeo.releng.targetplatform -->
-<target name="IoNAS Target Platform Luna" sequenceNumber="1409134704">
+<target name="IoNAS Target Platform Luna" sequenceNumber="1411633805">
   <locations>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.eclipse.core.runtime" version="3.10.0.v20140318-2214"/>
@@ -30,20 +30,13 @@
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.artop.core.autosar411.sdk.feature.group" version="4.2.1.201406040805"/>
-      <unit id="org.artop.aal.gautosar" version="4.2.1.201406040805"/>
-      <unit id="org.artop.aal.common" version="4.2.1.201406040805"/>
-      <unit id="org.artop.eel.feature.group" version="1.0.0.201302082307"/>
-      <unit id="org.artop.aal.examples.explorer" version="4.2.1.201406040805"/>
-      <unit id="org.artop.aal.examples.actions" version="4.2.1.201406040805"/>
-      <unit id="org.artop.aal.examples.editor" version="4.2.1.201406040805"/>
-      <unit id="org.artop.aal.examples.newwizards" version="4.2.1.201406040805"/>
-      <unit id="org.artop.core.examples.feature.group" version="4.2.1.201406040805"/>
+      <unit id="org.artop.core.workspace.feature.group" version="4.2.1.201406040805"/>
       <unit id="org.artop.examples.feature.group" version="4.2.1.201406040805"/>
       <repository location="https://www.artop.org/containers/artop-sdk-update-site-4.2/"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
-      <unit id="org.eclipse.sphinx.feature.group" version="0.8.0.201406112055"/>
-      <unit id="org.eclipse.sphinx.emf.metamodelgen.feature.group" version="0.8.0.201406112055"/>
+      <unit id="org.eclipse.sphinx.feature.group" version="0.8.1.201409171422"/>
+      <unit id="org.eclipse.sphinx.emf.metamodelgen.feature.group" version="0.8.1.201409171422"/>
       <repository location="http://download.eclipse.org/sphinx/updates/releases/0.8.x"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
@@ -58,9 +51,7 @@
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">
       <unit id="org.franca.core.feature.group" version="0.9.0.201405120913"/>
-      <unit id="org.franca.core.dsl.ui" version="0.9.0.201405120913"/>
-      <unit id="org.franca.deploymodel.dsl" version="0.9.0.201405120913"/>
-      <unit id="org.franca.deploymodel.dsl.ui" version="0.9.0.201405120913"/>
+      <unit id="org.franca.ui.feature.group" version="0.9.0.201405120913"/>
       <repository location="http://franca.eclipselabs.org.codespot.com/git/update_site/releases/0.9.0/"/>
     </location>
     <location includeMode="planner" includeAllPlatforms="false" includeSource="true" includeConfigurePhase="false" type="InstallableUnit">

@@ -29,14 +29,7 @@ location "http://download.eclipse.org/releases/luna" {
 
 location "https://www.artop.org/containers/artop-sdk-update-site-4.2/"{
 	org.artop.core.autosar411.sdk.feature.group
-	org.artop.aal.gautosar
-	org.artop.aal.common
-	org.artop.eel.feature.group
-	org.artop.aal.examples.explorer
-	org.artop.aal.examples.actions
-	org.artop.aal.examples.editor
-	org.artop.aal.examples.newwizards
-	org.artop.core.examples.feature.group
+	org.artop.core.workspace.feature.group
 	org.artop.examples.feature.group
 }
 
@@ -57,9 +50,7 @@ location "http://download.eclipse.org/tools/orbit/downloads/drops/R2014052502125
 
 location "http://franca.eclipselabs.org.codespot.com/git/update_site/releases/0.9.0/"{
 	org.franca.core.feature.group
-	org.franca.core.dsl.ui
-	org.franca.deploymodel.dsl
-	org.franca.deploymodel.dsl.ui
+	org.franca.ui.feature.group
 }
 
 location "http://download.eclipse.org/technology/swtbot/releases/latest" {
