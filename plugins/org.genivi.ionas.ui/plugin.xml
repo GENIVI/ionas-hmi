@@ -17,7 +17,7 @@
             locationURI="popup:org.eclipse.ui.popup.any?after=additions">
          <command
                commandId="org.genivi.ionas.ui.generatecommand"
-               label="IoNAS: Generate stubs"
+               label="IoNAS: Connect Models"
                style="push"
                tooltip="Generate AUTOSAR and Franca stubs">
             <visibleWhen

@@ -84,7 +84,7 @@ class BasicTransformationTest {
 	@Test
 	def void test01() {
 		bot.tree.getTreeItem("org.genivi.ionas.testProject").expand
-		bot.tree.getTreeItem("org.genivi.ionas.testProject").getNode("connector1.fcon").contextMenu("IoNAS: Generate stubs").
+		bot.tree.getTreeItem("org.genivi.ionas.testProject").getNode("connector1.fcon").contextMenu("IoNAS: Connect Models").
 			click
 		bot.shell("Progress Information")
 		Thread.sleep(8000)

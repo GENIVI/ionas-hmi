@@ -185,11 +185,11 @@ public class GenerateStubsHandler implements IHandler {
 							"Stubs have been generated. See the console for further information.");
 				} catch (Exception e) {
 					e.printStackTrace();
+					e.printStackTrace(out);
 					Exception ex = e;
 					String message = e.getMessage();
 					while ((message == null || message.equals(""))
 							&& (ex instanceof RuntimeException || ex instanceof InvocationTargetException)) {
-						System.out.println("in while");
 						if (ex instanceof RuntimeException && ((RuntimeException)ex).getCause() instanceof Exception) {
 							RuntimeException re = (RuntimeException) ex;
 							message = re.getCause().getMessage();
