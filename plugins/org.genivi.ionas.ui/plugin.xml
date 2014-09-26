@@ -19,7 +19,7 @@
                commandId="org.genivi.ionas.ui.generatecommand"
                label="IoNAS: Connect Models"
                style="push"
-               tooltip="Generate AUTOSAR and Franca stubs">
+               tooltip="Connect AUTOSAR and Franca models">
             <visibleWhen
                   checkEnabled="false">
                <with

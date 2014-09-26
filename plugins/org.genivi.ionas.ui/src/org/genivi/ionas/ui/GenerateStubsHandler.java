@@ -104,7 +104,7 @@ public class GenerateStubsHandler implements IHandler {
 						protected void execute(final IProgressMonitor monitor)
 								throws CoreException,
 								InvocationTargetException, InterruptedException {
-							monitor.beginTask("Generating stubs...", 110);
+							monitor.beginTask("Connecting models...", 110);
 
 							// activate plugins (that seems to be important)
 							FrancaIDLAdaptiveActivator
@@ -166,7 +166,7 @@ public class GenerateStubsHandler implements IHandler {
 								}
 
 								public String getDescription() {
-									return "Generating stubs";
+									return "Connecting models";
 								}
 
 								public void dispose() {									
@@ -182,7 +182,7 @@ public class GenerateStubsHandler implements IHandler {
 					});
 					MessageDialog.openInformation(
 							HandlerUtil.getActiveShell(event), "IoNAS",
-							"Stubs have been generated. See the console for further information.");
+							"Models have been connected. See the console for further information.");
 				} catch (Exception e) {
 					e.printStackTrace();
 					e.printStackTrace(out);
@@ -204,7 +204,7 @@ public class GenerateStubsHandler implements IHandler {
 					}
 					MessageDialog.openError(HandlerUtil.getActiveShell(event),
 							"IoNAS",
-							"An error occured while generating stubs: "
+							"An error occured while connecting the models: "
 									+ message);
 					Log.log(new Status(Status.ERROR, Activator.PLUGIN_ID,
 							Status.OK, message, e));
