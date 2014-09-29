@@ -18,6 +18,8 @@ project. It is being developed in the confined AUTOSAR space (i.e.,
 AUTOSAR Subversion repository), which can only be accessed by 
 AUTOSAR Development members.
 
+IoNAS-HMI is provided under Eclipse Public License v1 (EPL v1).
+
 
 -------------------------------------------------------------------------
 
