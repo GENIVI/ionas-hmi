@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Test
 Bundle-SymbolicName: org.genivi.ionas.test
-Bundle-Version: 0.0.1.qualifier
+Bundle-Version: 0.7.0.qualifier
 Bundle-Activator: org.genivi.ionas.test.Activator
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.swtbot.junit4_x;bundle-version="2.2.1",
@@ -29,7 +29,7 @@ Require-Bundle: org.eclipse.core.runtime,
  org.artop.aal.autosar411.edit;bundle-version="4.2.1",
  org.artop.aal.autosar411.services;bundle-version="4.2.1",
  org.genivi.ionas.ui;bundle-version="0.0.1",
- de.fraunhofer.fokus.francautosar.Connector.ui;bundle-version="1.0.0"
+ de.fraunhofer.fokus.francautosar.Connector.ui;bundle-version="0.7.0"
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Bundle-ActivationPolicy: lazy
 
