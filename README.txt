@@ -68,15 +68,20 @@ c) Open the Eclipse Preferences dialog, choose "Install / Update" and
    - Artop: https://www.artop.org/containers/artop-sdk-update-site-4.2/
 
 d) Open "Help > Install New Software..." and press "Add...".
-    Enter the location of the IoNAS update site (will be provided here).
-    Select the following features:
+   Enter the location of the IoNAS update site (will be provided here).
+   Select the following features:
     - Franca-AUTOSAR Interface Translation
     - Franca-AUTOSAR Interface Translation UI
-    Selecting the Source-feature is optional.
+   Selecting the Source-feature is optional.
 
-e) Complete the installation process. The installation will
-    automagically download the required packages from the software
-    sites specified in step (c).
+e) During the installation process, you will have to accept the license
+   agreement for the use of the binary converter plug-in. The license
+   is issued by Fraunhofer-Gesellschaft. The license can be reviewed
+   in Eclipse's "Review Licenses" dialog.
+
+f) Complete the installation process. The installation will
+   automagically download the required packages from the software
+   sites specified in step (c).
 
 
 3.2 Custom Installation
