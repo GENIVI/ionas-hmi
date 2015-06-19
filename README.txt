@@ -83,6 +83,11 @@ f) Complete the installation process. The installation will
    automagically download the required packages from the software
    sites specified in step (c).
 
+g) Optional: If you don't have a specific AUTOSAR authoring tool yet,
+   you might want to install feature "Autosar 4.1.1 SDK" from the Artop
+   site. This will provide you with editors and views for reviewing
+   and editing arxml models (e.g., in the AUTOSAR Explorer tree).
+
 
 3.2 Custom Installation
 
