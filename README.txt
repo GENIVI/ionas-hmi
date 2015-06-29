@@ -34,7 +34,9 @@ The source code for the model transformation itself is not part of this
 open-source project due to AUTOSAR legal restrictions. Instead, the
 transformation is provided in binary form as Eclipse feature 
 org.autosar.ionas.feature. This allows to use the IoNAS tool without
-access to the transformation's source code.
+access to the transformation's source code. A license for
+this binary distribution is issued by Fraunhofer and will be presented
+for review and click-through during the installation process.
 
 
 -------------------------------------------------------------------------
@@ -68,10 +70,11 @@ c) Open the Eclipse Preferences dialog, choose "Install / Update" and
    - Artop: https://www.artop.org/containers/artop-sdk-update-site-4.2/
 
 d) Open "Help > Install New Software..." and press "Add...".
-   Enter the location of the IoNAS update site (will be provided here).
+   Enter the location of the IoNAS update site:
+   - http://docs.projects.genivi.org/ionas-ui-update-site/
    Select the following features:
-    - Franca-AUTOSAR Interface Translation
-    - Franca-AUTOSAR Interface Translation UI
+   - Franca-AUTOSAR Interface Translation
+   - Franca-AUTOSAR Interface Translation UI
    Selecting the Source-feature is optional.
 
 e) During the installation process, you will have to accept the license
