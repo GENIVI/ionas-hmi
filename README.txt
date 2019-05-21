@@ -156,7 +156,7 @@ the actual model transformation is not part of this project; if you
 would like to participate in its development, you should refer to the
 following AUTOSAR Subversion repository:
 
-   https://svn.autosar.org/repos/work/25_Concepts/Active/CONC_610_IntegrationOfNonARSystems/Test
+   https://svn.autosar.org/repos/work/25_Concepts/Incorporated/CP_R4.2/CONC_610_IntegrationOfNonARSystems/Test
 
 
 -------------------------------------------------------------------------
